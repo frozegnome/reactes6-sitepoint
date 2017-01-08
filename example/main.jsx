@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {observer} from 'mobx-react';
-import DevTool from 'mobx-react-devtools';
 import {ReactReadingTime} from '../src/react-reading-time';
 
 const Main = () => {
@@ -10,10 +9,7 @@ const Main = () => {
   const textColor = 'teal';
 
   return (
-    <div>
-      <DevTool />
-      <ReactReadingTime text={text} textColor={textColor} />
-    </div>
+    <ReactReadingTime text={text} textColor={textColor} />
   );
 };
 
