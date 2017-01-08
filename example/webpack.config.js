@@ -2,10 +2,10 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: {
-    'react-reading-time': [
+    'main': [
       'webpack-dev-server/client?http://localhost:8881/',
       'webpack/hot/only-dev-server',
-      './example/react-reading-time.jsx'
+      './example/main.jsx'
     ]
   },
   output: {
