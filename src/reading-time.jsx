@@ -3,7 +3,7 @@ import {observer} from 'mobx-react';
 import DevTool from 'mobx-react-devtools';
 import _ from 'lodash/fp';
 
-export const ReadingTime = observer(({props}) => {
+const ReadingTime = observer((props) => {
   const {text, textColor, ...rest} = props;
   const minutes = readTime === 1 ? 'minute' : 'minutes';
 
@@ -21,3 +21,5 @@ export const ReadingTime = observer(({props}) => {
     </div>
   );
 });
+
+export default ReadingTime;

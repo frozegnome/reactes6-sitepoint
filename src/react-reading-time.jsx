@@ -1,9 +1,9 @@
 import React from 'react';
 import {observer} from 'mobx-react';
-import {ReadingTime} from './reading-time';
+import ReadingTime from './reading-time';
 import DevTool from 'mobx-react-devtools';
 
-export const ReactReadingTime = observer(({props}) => {
+const ReactReadingTime = observer((props) => {
   const {text, textColor} = props;
 
   return (
@@ -20,3 +20,5 @@ export const ReactReadingTime = observer(({props}) => {
     </div>
   );
 });
+
+export default ReactReadingTime;
