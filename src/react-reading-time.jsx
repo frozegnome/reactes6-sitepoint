@@ -13,15 +13,14 @@ import DevTool from 'mobx-react-devtools';
     was getting. Since im not really doing that here, ditch the braces for now. Working for now
 */
 
-const ReactReadingTime = observer((props) => {
-  const {text, textColor} = props;
-
+const ReactReadingTime = observer(({text, textColor, updateText}) => {
   return (
     <div className='container' style={{ marginTop: '50px' }}>
       <DevTool />
       <div className='col-lg-8 col-lg-offset-2 form-group'>
         <textarea
           value={text}
+          onChange={(e) => updateText(e)}
           className='form-control'
           style={{ height: '500px', resize: 'none' }}>
         </textarea>

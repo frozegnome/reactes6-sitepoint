@@ -3,13 +3,12 @@ import {observer} from 'mobx-react';
 import DevTool from 'mobx-react-devtools';
 import _ from 'lodash/fp';
 
-const ReadingTime = observer((props) => {
-  const {text, textColor, ...rest} = props;
-  const minutes = readTime === 1 ? 'minute' : 'minutes';
-
+const ReadingTime = observer(({text, textColor, ...rest}) => {
   const countWords = (text) => text.split(/\s+/).length;
-  const wordsPerMinute = (words) => Math.round(words / 720);
+  const wordsPerMinute = (words) => Math.round(words / 270);
   const readTime = _.flow(countWords, wordsPerMinute);
+
+  const minutes = readTime(text) === 1 ? 'minute' : 'minutes';
 
   return(
     <div {...rest}>
